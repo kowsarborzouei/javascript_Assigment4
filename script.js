@@ -65,36 +65,39 @@
 // }
 // console.log(rem([1,2,3,4],[2,3]))
 // ######################################## 5 (1400.07.22) ##########################################
-function move(arr, index, offset) {
-    if (typeof arr==="string"){
-        arr=arr.split('')
-    }
-    if (offset >= arr.length) {
-        console.log('offset is bigger than length arr')
-
-    } else {
-        arr.splice(offset + index, 0, arr.splice(index, 1)[0]);
-        return arr
-    };
-
-}
-
-
-console.log(move('kkbkk', 2, 2))
-//################################################# 6 (1400.07.22) ######################################
-// const removeAdj = (str) => {
-//     let res = ''
-//     let lastChar = ''
-//     for (let char of str) {
-//         // res += lastChar !== char ? char : '';
-//         if(lastChar !== char){
-//             res += char
-//             lastChar=char
-//         }
+// function move(arr, index, offset) {
+//     if (typeof arr==="string"){
+//         arr=arr.split('')
 //     }
-//     return res
+//     if (offset >= arr.length) {
+//         console.log('offset is bigger than length arr')
+//
+//     } else {
+//         arr.splice(offset + index, 0, arr.splice(index, 1)[0]);
+//         return arr
+//     };
+//
 // }
-// console.log(removeAdj('aaaaaaacdddddlkpklkpkk'))
+//
+//
+// console.log(move('kkbkk', 2, 2))
+//################################################# 6 (1400.07.22) ######################################
+const removeAdj = (str) => {
+    if(typeof str === Array.isArray(str)){
+        str=str.split('')
+    }
+    let res = ''
+    let lastChar = ''
+    for (let char of str) {
+        // res += lastChar !== char ? char : '';
+        if(lastChar !== char){
+            res += char
+            lastChar=char
+        }
+    }
+    return res
+}
+console.log(removeAdj([1,1,1,2,2,2,2,5,5,5,8,7]))
 // ################################################### 7 (1400.07.22) #########################################
 // function reverseString(str) {
 //     let newString = "";
