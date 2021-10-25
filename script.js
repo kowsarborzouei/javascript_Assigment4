@@ -82,28 +82,31 @@
 //
 // console.log(move('kkbkk', 2, 2))
 //################################################# 6 (1400.07.22) ######################################
-const removeAdj = (str) => {
+// const removeAdj = (str) => {
+//     if(typeof str === Array.isArray(str)){
+//         str=str.split('')
+//     }
+//     let res = ''
+//     let lastChar = ''
+//     for (let char of str) {
+//         // res += lastChar !== char ? char : '';
+//         if(lastChar !== char){
+//             res += char
+//             lastChar=char
+//         }
+//     }
+//     return res
+// }
+// console.log(removeAdj([1,1,1,2,2,2,2,5,5,5,8,7]))
+// ################################################### 7 (1400.07.22) #########################################
+function reverseString(str) {
     if(typeof str === Array.isArray(str)){
         str=str.split('')
     }
-    let res = ''
-    let lastChar = ''
-    for (let char of str) {
-        // res += lastChar !== char ? char : '';
-        if(lastChar !== char){
-            res += char
-            lastChar=char
-        }
+    let newString = "";
+    for (let i = str.length - 1; i >= 0; i--) {
+        newString += str[i];
     }
-    return res
+    return newString;
 }
-console.log(removeAdj([1,1,1,2,2,2,2,5,5,5,8,7]))
-// ################################################### 7 (1400.07.22) #########################################
-// function reverseString(str) {
-//     let newString = "";
-//     for (let i = str.length - 1; i >= 0; i--) {
-//         newString += str[i];
-//     }
-//     return newString;
-// }
-// console.log(reverseString('hello welcome'));
+console.log(reverseString([1,2,3,5,6,8,7,9]));
