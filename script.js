@@ -54,31 +54,33 @@
 // };
 // square(6);
 // ######################################## 4 (1400.07.22) ##########################################
-function rem(arr1,arr2){
-    if(typeof arr1 === 'string' && typeof arr2 === 'string'){
-        const  str_arr1=arr1.split('')
-        const  str_arr2=arr2.split('')
-        return  str_arr1.filter(item => !str_arr2.includes(item))
-    }else
-    return  arr1.filter(item => !arr2.includes(item))
-
-}
-console.log(rem('its ok','ok'))
-// ######################################## 5 (1400.07.22) ##########################################
-// function move(arr, index, offset) {
-//     console.log(arr.length)
-//     if (offset >= arr.length) {
-//         console.log('offset is bigger than length arr')
-//
-//     } else {
-//         arr.splice(offset + index, 0, arr.splice(index, 1)[0]);
-//         return arr
-//     }
-//     ;
+// function rem(arr1,arr2){
+//     if(typeof arr1 === 'string' && typeof arr2 === 'string'){
+//         const  str_arr1=arr1.split('')
+//         const  str_arr2=arr2.split('')
+//         return  str_arr1.filter(item => !str_arr2.includes(item))
+//     }else
+//     return  arr1.filter(item => !arr2.includes(item))
 //
 // }
-//
-// console.log(move([1, 2, 3, 4, 5], 2, 2))
+// console.log(rem([1,2,3,4],[2,3]))
+// ######################################## 5 (1400.07.22) ##########################################
+function move(arr, index, offset) {
+    if (typeof arr==="string"){
+        arr=arr.split('')
+    }
+    if (offset >= arr.length) {
+        console.log('offset is bigger than length arr')
+
+    } else {
+        arr.splice(offset + index, 0, arr.splice(index, 1)[0]);
+        return arr
+    };
+
+}
+
+
+console.log(move([1,2,3,4,5], 2, 2))
 //################################################# 6 (1400.07.22) ######################################
 // const removeAdj = (str) => {
 //     let res = ''
