@@ -80,7 +80,7 @@ function move(arr, index, offset) {
 }
 
 
-console.log(move([1,2,3,4,5], 2, 2))
+console.log(move('kkbkk', 2, 2))
 //################################################# 6 (1400.07.22) ######################################
 // const removeAdj = (str) => {
 //     let res = ''
