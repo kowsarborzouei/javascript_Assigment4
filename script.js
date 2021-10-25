@@ -1,5 +1,6 @@
 // ######################################## 1 (1400.07.22) ##########################################
 // const printNumber = (input) => {
+//
 //     if (!input && input !==0){
 //         return ''
 //     }
@@ -53,10 +54,16 @@
 // };
 // square(6);
 // ######################################## 4 (1400.07.22) ##########################################
-// function rem(arr1,arr2){
-//     return  arr1.filter(item => !arr2.includes(item))
-// }
-// console.log(rem([1,2,3,4,5],[2,3]))
+function rem(arr1,arr2){
+    if(typeof arr1 === 'string' && typeof arr2 === 'string'){
+        const  str_arr1=arr1.split('')
+        const  str_arr2=arr2.split('')
+        return  str_arr1.filter(item => !str_arr2.includes(item))
+    }else
+    return  arr1.filter(item => !arr2.includes(item))
+
+}
+console.log(rem('its ok','ok'))
 // ######################################## 5 (1400.07.22) ##########################################
 // function move(arr, index, offset) {
 //     console.log(arr.length)
